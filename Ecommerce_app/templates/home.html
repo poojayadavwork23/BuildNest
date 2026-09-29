@@ -1,0 +1,442 @@
+{% load static %}
+<html>
+<head>
+    <title>BuildNest</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <a href="#">Build<span>Nest</span></a>
+    </div>
+
+    <nav class="nav-menu">
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Plan My Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <a href="#" class="search-icon">🔍</a>
+
+        <a href="#" class="cart-icon">🛒</a>
+
+        <a href="#" class="login-btn">Login</a>
+
+    </div>
+
+</header>
+<section class="hero-slider">
+
+    <!-- Slide 1 -->
+    <div class="hero-slide active"
+         style="background-image: url('{% static " images
+    /buildnest_hero_banner.png" %}');">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-label">BUILDNEST</p>
+
+        <h1>
+            Build Your<br>
+            <span>Dream Home</span>
+        </h1>
+
+        <p class="hero-description">
+            Everything you need from foundation
+            to finishing — all in one place.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="hero-btn primary">
+                Plan My Home →
+            </a>
+
+            <a href="#" class="hero-btn secondary">
+                Shop Now
+            </a>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <!-- Slide 2 -->
+    <div class="hero-slide"
+         style="background-image: url('{% static " images
+    /buildnest_hero_banner.png" %}');">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-label">BUILDNEST</p>
+
+        <h1>
+            Renovate With<br>
+            <span>Style</span>
+        </h1>
+
+        <p class="hero-description">
+            Transform your existing space with
+            beautiful products and smart ideas.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="hero-btn primary">
+                Explore Renovation →
+            </a>
+
+            <a href="#" class="hero-btn secondary">
+                Shop Now
+            </a>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <!-- Slide 3 -->
+    <div class="hero-slide"
+         style="background-image: url('{% static " images
+    /buildnest_hero_banner.png" %}');">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-label">BUILDNEST</p>
+
+        <h1>
+            Decorate Your<br>
+            <span>Perfect Space</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover furniture, lighting and
+            beautiful home decor.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="hero-btn primary">
+                Explore Decor →
+            </a>
+
+            <a href="#" class="hero-btn secondary">
+                Shop Now
+            </a>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <!-- Previous / Next buttons -->
+    <button class="slider-arrow prev" onclick="changeSlide(-1)">
+        &#10094;
+    </button>
+
+    <button class="slider-arrow next" onclick="changeSlide(1)">
+        &#10095;
+    </button>
+
+
+    <!-- Slider dots -->
+    <div class="slider-dots">
+
+        <span class="dot active" onclick="goToSlide(0)"></span>
+
+        <span class="dot" onclick="goToSlide(1)"></span>
+
+        <span class="dot" onclick="goToSlide(2)"></span>
+
+    </div>
+    <button class="slider-arrow next" onclick="changeSlide(1)">
+        &#10095;
+    </button>
+    <button class="slider-arrow prev" onclick="changeSlide(-1)">
+        &#10094;
+    </button>
+
+</section>
+<section class="categories">
+
+    <h2>Shop by Category</h2>
+    <p class="section-subtitle">
+        Everything you need for your home
+    </p>
+
+    <div class="category-container">
+
+        <div class="category-card">
+            <div class="category-icon">🎨</div>
+            <h3>Paint & Wall Decor</h3>
+            <p>Paint, wallpaper & wall panels</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🧱</div>
+            <h3>Tiles & Flooring</h3>
+            <p>Floor tiles, wall tiles & marble</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🚪</div>
+            <h3>Doors & Windows</h3>
+            <p>Doors, windows & hardware</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">💡</div>
+            <h3>Electrical & Lighting</h3>
+            <p>Lights, fans, switches & more</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🚿</div>
+            <h3>Bathroom</h3>
+            <p>Sanitaryware, taps & showers</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🍳</div>
+            <h3>Kitchen</h3>
+            <p>Kitchen fittings & accessories</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🛋️</div>
+            <h3>Furniture</h3>
+            <p>Sofas, beds & wardrobes</p>
+        </div>
+
+        <div class="category-card">
+            <div class="category-icon">🪟</div>
+            <h3>Home Decor</h3>
+            <p>Curtains, carpets & decoration</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="products">
+
+    <h2>Trending Products</h2>
+
+    <p class="section-subtitle">
+        Popular products for your home
+    </p>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <div class="product-image">Product Image</div>
+
+            <h3>Modern Wall Paint</h3>
+            <p class="product-category">Paint & Wall Decor</p>
+            <p class="product-price">₹899</p>
+
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image</div>
+
+            <h3>Premium Floor Tiles</h3>
+            <p class="product-category">Tiles & Flooring</p>
+            <p class="product-price">₹1,299</p>
+
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image</div>
+
+            <h3>Wooden Main Door</h3>
+            <p class="product-category">Doors & Windows</p>
+            <p class="product-price">₹12,999</p>
+
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image</div>
+
+            <h3>Modern Ceiling Light</h3>
+            <p class="product-category">Electrical & Lighting</p>
+            <p class="product-price">₹1,499</p>
+
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="home-planner">
+
+    <div class="planner-content">
+
+        <h2>Plan My Home</h2>
+
+        <p>
+            Plan your dream home according to your space,
+            style and budget.
+        </p>
+
+        <div class="planner-features">
+            <div>
+                <span>📐</span>
+                <p>Choose your home size</p>
+            </div>
+
+            <div>
+                <span>💰</span>
+                <p>Set your budget</p>
+            </div>
+
+            <div>
+                <span>🎨</span>
+                <p>Select your style</p>
+            </div>
+        </div>
+
+        <a href="#" class="planner-btn">
+            Start Planning
+        </a>
+
+    </div>
+
+</section>
+
+<section class="offers">
+
+    <div class="offer-content">
+
+        <p class="offer-small">LIMITED TIME OFFER</p>
+
+        <h2>Make Your Home Beautiful</h2>
+
+        <p>
+            Get exciting deals on selected home improvement
+            and decoration products.
+        </p>
+
+        <a href="#" class="offer-btn">Explore Offers</a>
+
+    </div>
+
+</section>
+<section class="why-buildnest">
+
+    <h2>Why Choose BuildNest?</h2>
+
+    <p class="section-subtitle">
+        Making your home journey simple and convenient
+    </p>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <div class="why-icon">🏠</div>
+            <h3>Everything in One Place</h3>
+            <p>
+                Find products for building, renovating and
+                decorating your home.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">💰</div>
+            <h3>Budget Friendly</h3>
+            <p>
+                Compare products and find options that
+                fit your budget.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">✨</div>
+            <h3>Smart Home Planning</h3>
+            <p>
+                Plan your home according to your space,
+                style and budget.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🚚</div>
+            <h3>Convenient Shopping</h3>
+            <p>
+                Shop your home essentials from the comfort
+                of your home.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h2>BuildNest</h2>
+            <p>Build. Renovate. Decorate.</p>
+            <p>
+                Everything your home needs,
+                all in one place.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Categories</a>
+            <a href="#">Plan My Home</a>
+            <a href="#">About Us</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Customer Support</h3>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Follow Us</h3>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 BuildNest. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
+</body>
+
+</html>
