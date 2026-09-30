@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
-
+from django.contrib.auth.models import User
 """ef base(request):
     s="hello"
     return HttpResponse(s)"""
@@ -35,3 +35,32 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect("home")
+
+def register_view(request):
+    if request.method == "POST":
+        username = request.POST.get("username")
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        confirm_password = request.POST.get("confirm_password")
+
+        if password != confirm_password:
+            return render(request, "register.html", {
+                "error": "Passwords do not match"
+            })
+
+        if User.objects.filter(username=username).exists():
+            return render(request, "register.html", {
+                "error": "Username already exists"
+            })
+
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=password
+        )
+
+        user.save()
+
+        return redirect("login")
+
+    return render(request, "register.html")

@@ -26,8 +26,17 @@
         <a href="#" class="search-icon">🔍</a>
 
         <a href="#" class="cart-icon">🛒</a>
+   <div class="nav-actions">
+        <a href="#" class="search-icon">🔍</a>
+        <a href="#" class="cart-icon">🛒</a>
 
+        {% if user.is_authenticated %}
+        <span class="username">Hi, {{ user.username }}</span>
+        <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+        {% else %}
         <a href="{% url 'login' %}" class="login-btn">Login</a>
+        {% endif %}
+   </div>
 
     </div>
 
