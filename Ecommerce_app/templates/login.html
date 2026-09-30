@@ -66,18 +66,17 @@
 
     <form method="POST">
         {% csrf_token %}
-
-        <input type="text"
-               name="username"
-               placeholder="Enter Username"
-               required>
-
-        <input type="password"
-               name="password"
-               placeholder="Enter Password"
-               required>
-
+        <label> Username
+        <input type="text" name="username" placeholder="Enter Username" required>
+        </label>
+        <label>Password
+        <input type="password" name="password" placeholder="Enter Password" required>
+        </label>
         <button type="submit">Login</button>
+        <p>
+        New User?
+        <a href="">Create an account</a>
+    </p>
     </form>
 
 </div>

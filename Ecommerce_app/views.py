@@ -17,18 +17,19 @@ def login_view(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
+        newuser= request.POST.get("newuser")
 
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=username, password=password, newuser=newuser)
 
         if user is not None:
             login(request, user)
             return redirect("home")
-
-        return render(request, "Ecommerce_app/login.html", {
+        else:
+            return render(request, "Ecommerce_app/login.html", {
             "error": "Invalid username or password"
         })
 
-    return render(request, "Ecommerce_app/login.html")
+    return render(request, "login.html")
 
 
 def logout_view(request):
